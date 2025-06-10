@@ -46,7 +46,7 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 </details>
 ---
 
-##You can also check our website under development rightnow! [Onyx Project](https://www.youtube.com)
+## You can also check our Discord Server under development rightnow! [Onyx Project](https://discord.gg/TaCEYNvb)
 
 ---
 
