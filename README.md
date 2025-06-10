@@ -1,1 +1,44 @@
-# Onyx-Project
+# OnyxPlayer - A Vencord Theme
+
+A theme by **OnyxProject** that applies a dynamic, visually-rich style to the built-in Vencord Spotify player. It enhances the player with background effects based on the current album art.
+
+---
+
+## Prerequisites
+
+###This theme styles a built-in Vencord feature. You **must** have the following enabled for this theme to work correctly:
+
+1.  **[Vencord](https://vencord.dev/)** installed.
+2.  Your Spotify account connected to Discord.
+3.  The **`SpotifyControls`** plugin enabled within Vencord. To enable it:
+    -   Go to **User Settings > Vencord > Plugins**.
+    -   Find `SpotifyControls` and make sure the toggle is on
+
+---
+
+## Installation
+
+###The **Online Theme** method is recommended as it allows for automatic updates.
+
+#### Method 1: Online Theme (Recommended)
+
+1.  Copy this line of code:
+    ```
+    @import url(`https://raw.githubusercontent.com/Monometra/OnyxPlayer/main/OnyxPlayer.theme.css`)
+    ```
+    * **Note:** fix later
+2.  In Discord, go to **User Settings > Vencord > Themes**.
+3.  Under the "Online Themes" section, paste the Line of Code into the input box and press Enter.
+
+#### Method 2: Local Theme
+
+1.  Download the `OnyxPlayer.theme.css` file from this repository.
+2.  In Discord, go to **User Settings > Vencord > Themes**.
+3.  Click the **"Open Themes Folder"** button.
+4.  Move the downloaded file into this folder.
+
+---
+
+### Credits
+
+-   **Author & Creator:** Monometra & Adry
