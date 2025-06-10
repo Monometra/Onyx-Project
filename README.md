@@ -45,6 +45,7 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 3.  Click the **"Open Themes Folder"** button.
 4.  Move the downloaded file into this folder.
 </details>
+
 ---
 
 ## You can also check our Discord Server under development right now! [Onyx Project](https://discord.gg/TaCEYNvb)
