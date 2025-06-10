@@ -6,7 +6,8 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 
 ## Prerequisites
 
-###This theme styles a built-in Vencord feature. You **must** have the following enabled for this theme to work correctly:
+> [!IMPORTANT]
+> This theme styles a built-in Vencord feature. You **must** have the following enabled for this theme to work correctly:
 
 1.  **[Vencord](https://vencord.dev/)** installed.
 2.  Your Spotify account connected to Discord.
@@ -18,19 +19,19 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 
 ## Installation
 
-###The **Online Theme** method is recommended as it allows for automatic updates.
+> [!note]
+> The **Online Theme** method is recommended as it allows for automatic updates.
 
-#### Method 1: Online Theme (Recommended)
+### Method 1: Online Theme (Recommended)
 
 1.  Copy this line of code:
     ```
     @import url(`https://raw.githubusercontent.com/Monometra/OnyxPlayer/main/OnyxPlayer.theme.css`)
     ```
-    * **Note:** fix later
 2.  In Discord, go to **User Settings > Vencord > Themes**.
 3.  Under the "Online Themes" section, paste the Line of Code into the input box and press Enter.
 
-#### Method 2: Local Theme
+### Method 2: Local Theme
 
 1.  Download the `OnyxPlayer.theme.css` file from this repository.
 2.  In Discord, go to **User Settings > Vencord > Themes**.
