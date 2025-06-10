@@ -39,6 +39,7 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 <details>
 <summary>Method 2: Local Theme</summary>
 
+
 1.  Download the `OnyxPlayer.theme.css` file from this repository.
 2.  In Discord, go to **User Settings > Vencord > Themes**.
 3.  Click the **"Open Themes Folder"** button.
