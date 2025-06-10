@@ -22,21 +22,31 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 > [!note]
 > The **Online Theme** method is recommended as it allows for automatic updates.
 
-### Method 1: Online Theme (Recommended)
+<details>
+<summary>Method 1: Online Theme (Recommended)</summary>
 
 1.  Copy this line of code:
-    ```
+   
+    ```ruby
     @import url(`https://raw.githubusercontent.com/Monometra/OnyxPlayer/main/OnyxPlayer.theme.css`)
     ```
-2.  In Discord, go to **User Settings > Vencord > Themes**.
-3.  Under the "Online Themes" section, paste the Line of Code into the input box and press Enter.
+    
+3.  In Discord, go to **User Settings > Vencord > Themes**.
+4.  Under the "Online Themes" section, paste the Line of Code into the input box and press Enter.
 
-### Method 2: Local Theme
+</details>
+
+<details>
+<summary>Method 2: Local Theme</summary>
 
 1.  Download the `OnyxPlayer.theme.css` file from this repository.
 2.  In Discord, go to **User Settings > Vencord > Themes**.
 3.  Click the **"Open Themes Folder"** button.
 4.  Move the downloaded file into this folder.
+</details>
+---
+
+##You can also check our website under development rightnow! [Onyx Project](https://www.youtube.com)
 
 ---
 
