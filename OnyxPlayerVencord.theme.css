@@ -24,7 +24,7 @@
 }
 
 /* Hover state */
-/*#vc-spotify-player:hover {
+#vc-spotify-player:hover {
   --blur-amount: 0px;
 }
 
@@ -50,7 +50,7 @@
   animation: backgroundPan 50s ease-in-out infinite alternate;
 }
 
-/* #vc-spotify-player:hover::before {
+ #vc-spotify-player:hover::before {
   opacity: 0.8;
 }
 
