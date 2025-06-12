@@ -1,264 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' https://cwallet.com;
-    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-    font-src https://fonts.gstatic.com;
-    connect-src 'self';
-    img-src 'self' data:;
-    frame-src https://cwallet.com;
-  " />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Onyx Theme for Vencord</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0f0f0f;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 30px 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .container {
-      width: 100%;
-      max-width: 720px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    header p {
-      color: #aaa;
-      font-size: 1.1rem;
-      max-width: 540px;
-      margin: 15px auto 0;
-      line-height: 1.6;
-    }
-    svg text.logo-text {
-      font-family: 'Inter', sans-serif;
-      font-size: 70px;
-      font-weight: 700;
-      fill: url(#logoGradient);
-    }
-    main h2 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    main p {
-      font-weight: 500;
-      margin-bottom: 20px;
-      color: #ccc;
-    }
-    .copy-container {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 35px;
-      flex-wrap: wrap;
-    }
-    .url-box {
-      flex: 1;
-      padding: 12px 16px;
-      border-radius: 8px;
-      border: 1px solid #333;
-      background: #1b1b1b;
-      color: #eee;
-      font-family: monospace;
-      font-size: 0.95rem;
-      user-select: all;
-      width: 100%;
-    }
-    .cta-button {
-      background-color: #222;
-      border: 1px solid #555;
-      border-radius: 8px;
-      color: #ccc;
-      font-weight: 600;
-      padding: 12px 20px;
-      cursor: pointer;
-      user-select: none;
-      transition: 0.3s ease;
-      min-width: 120px;
-    }
-    .cta-button:hover {
-      background-color: #333;
-      color: #fff;
-      box-shadow: 0 0 8px 1px #444;
-    }
-    .cta-button:active {
-      background-color: #161616;
-    }
-    .cta-button.copied {
-      background-color: #1e4620;
-      color: #a5d6a7;
-      border-color: #a5d6a7;
-      box-shadow: 0 0 8px 2px #a5d6a7;
-    }
-    .button-text.success {
-      display: none;
-    }
-    .cta-button.copied .button-text.original {
-      display: none;
-    }
-    .cta-button.copied .button-text.success {
-      display: inline;
-    }
-    .tip-section {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .tip-section h3 {
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-    .tip-button {
-      background-color: #242424;
-      border: 1px solid #444;
-      border-radius: 8px;
-      color: #ccc;
-      font-weight: 600;
-      padding: 12px 24px;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s ease;
-    }
-    .tip-button:hover {
-      background-color: #333;
-      color: #fff;
-    }
-    .installation-guide {
-      background-color: #181818;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-bottom: 40px;
-    }
-    .installation-guide h3 {
-      font-size: 1.3rem;
-      margin-top: 0;
-      color: #e0e0e0;
-      font-weight: 700;
-    }
-    .installation-guide ol {
-      padding-left: 1.4em;
-      line-height: 1.6;
-    }
-    .installation-guide li {
-      margin-bottom: 12px;
-    }
-    .installation-guide a {
-      color: #8ab4f8;
-      text-decoration: none;
-    }
-    .installation-guide a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 50px;
-    }
-    footer a {
-      color: #888;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #ccc;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnyxPlayer — A Vencord Theme</title>
+    <meta name="description" content="A dynamic, bloat-free theme for the Vencord Spotify player, designed for a seamless visual experience with minimal distractions." />
+    <meta name="author" content="OnyxPlayer" />
+    <meta property="og:title" content="OnyxPlayer — A Vencord Theme" />
+    <meta property="og:description" content="A dynamic, bloat-free theme for the Vencord Spotify player." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-live-url.com" />
+    <meta property="og:image" content="https://placehold.co/1200x630/0A0A0C/EAEAEA?text=OnyxPlayer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0A0A0C;
+            --text: #EAEAEA;
+            --text-subtle: #A0A0A0;
+            --accent: #5494F7;
+            --btn-bg: #F0F0F0;
+            --btn-dark-bg: #1A1A1C;
+            --btn-hover-bg: #FFFFFF;
+            --dropdown-bg: #151517;
+            --dropdown-border: #2A2A2E;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.5);
+        }
+
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid var(--dropdown-border);
+            user-select: none;
+            gap: 2rem;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -.02em;
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .nav-links>a,
+        .dropdown>a {
+            color: var(--text-subtle);
+            text-decoration: none;
+            position: relative;
+            padding: .25rem .1rem;
+            transition: color .25s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links>a:hover,
+        .dropdown>a:hover {
+            color: var(--text);
+        }
+
+        .dropdown {
+            position: relative;
+            padding-bottom: .75rem;
+            margin-bottom: -.75rem;
+        }
+
+        .dropdown>a .icon {
+            margin-left: .25rem;
+            transition: transform .3s ease;
+            width: 16px;
+            height: 16px;
+        }
+
+        .dropdown:hover>a .icon {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            background: var(--dropdown-bg);
+            border: 1px solid var(--dropdown-border);
+            padding: .5rem;
+            display: none;
+            flex-direction: column;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px var(--shadow-dark);
+            min-width: 180px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(10px);
+            transition: opacity .25s ease, transform .25s ease, visibility .25s;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-content a {
+            padding: .6rem .8rem;
+            font-size: .95rem;
+            color: var(--text-subtle);
+            font-weight: 500;
+            transition: background-color .2s ease, color .2s ease;
+            white-space: nowrap;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, .05);
+            color: var(--text);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+        }
+
+        .download-btn {
+            background: var(--btn-bg);
+            color: #000;
+            padding: .75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: .95rem;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            transition: all .25s ease;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .download-btn .icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .download-btn:hover,
+        .download-btn:focus-visible {
+            background: var(--btn-hover-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-light);
+            outline: none;
+        }
+
+        main.hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text);
+            text-shadow: 0 2px 5px var(--shadow-dark);
+            min-height: 2.5em;
+            padding: 0 1rem;
+        }
+        
+        .logo-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            vertical-align: -0.05em;
+            color: var(--text);
+        }
+
+        .italic {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .typewriter-cursor {
+            display: inline-block;
+            background-color: var(--accent);
+            width: 4px;
+            animation: blink 1s infinite;
+            transition: opacity .3s ease;
+        }
+
+        .typewriter-cursor.typing {
+            animation: none;
+        }
+
+        @keyframes blink {
+            0%, 100% { background-color: var(--accent); }
+            50% { background-color: transparent; }
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transition: opacity 1s ease .5s;
+        }
+
+        .fade-in-section.visible {
+            opacity: 1;
+        }
+
+        .hero p {
+            margin-top: 1.5rem;
+            color: var(--text-subtle);
+            font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        .hero-buttons {
+            margin-top: 3.5rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all .25s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6rem;
+            min-width: 180px;
+            box-shadow: 0 4px 20px var(--shadow-dark);
+            border: 1px solid transparent;
+        }
+
+        .btn .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-light {
+            background: var(--btn-bg);
+            color: #000;
+        }
+
+        .btn-light:hover,
+        .btn-light:focus-visible {
+            transform: translateY(-3px);
+            background: var(--btn-hover-bg);
+            box-shadow: 0 7px 25px var(--shadow-dark);
+            outline: none;
+        }
+
+        .btn-dark {
+            background: var(--btn-dark-bg);
+            color: var(--text);
+            border-color: var(--dropdown-border);
+        }
+
+        .btn-dark:hover,
+        .btn-dark:focus-visible {
+            transform: translateY(-3px);
+            background: #2a292f;
+            border-color: #444;
+            box-shadow: 0 7px 25px var(--shadow-dark);
+            outline: none;
+        }
+
+        .icons {
+            margin-top: 5rem;
+            display: flex;
+            gap: 2rem;
+            color: var(--text-subtle);
+        }
+
+        .icons a {
+            transition: transform .25s ease, color .3s ease;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .icons .icon {
+            width: 26px;
+            height: 26px;
+        }
+
+        .icons a:hover,
+        .icons a:focus-visible {
+            transform: scale(1.15) translateY(-2px);
+            color: var(--accent);
+            outline: none;
+        }
+
+        @media (max-width:768px) {
+            nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .nav-cta {
+                flex-grow: 1;
+                justify-content: flex-end;
+            }
+            main.hero {
+                padding: 4rem 1.5rem;
+            }
+            .hero-headline {
+                font-size: 2.5rem;
+                min-height: 3.5em;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            .icons {
+                margin-top: 4rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg" aria-label="Onyx Logo" role="img">
-        <defs>
-          <linearGradient id="logoGradient" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" style="stop-color:#E0E0E0;" />
-            <stop offset="100%" style="stop-color:#A0A0A0;" />
-          </linearGradient>
-        </defs>
-        <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="logo-text">Onyx</text>
-      </svg>
-      <p>A dynamic, bloat-free theme for the Vencord Spotify player. Designed for a seamless visual experience.</p>
-    </header>
-
-    <main>
-      <h2>Get the Theme</h2>
-      <p>Copy the import rule below to use the theme in the plugin's Custom CSS field.</p>
-      <div class="copy-container">
-        <input type="text" class="url-box" value="@import url('https://raw.githubusercontent.com/Monometra/Onyx-Project/refs/heads/Onyx/OnyxPlayerVencord.theme.css');" readonly aria-label="Theme import URL" />
-        <button class="cta-button" id="copy-button" onclick="copyToClipboard()" aria-live="polite" aria-pressed="false">
-          <span class="button-text original">Copy Rule</span>
-          <span class="button-text success" aria-hidden="true">Copied!</span>
-        </button>
-      </div>
-
-      <section class="tip-section" aria-label="Support the project">
-        <h3>Support This Project</h3>
-        <p>If you like this theme, please consider supporting me!</p>
-        <a href="https://cwallet.com/t/VBDN64HT" target="_blank" rel="noopener noreferrer" class="tip-button" role="button" tabindex="0">Tip Me on Cwallet</a>
-      </section>
+    <nav>
+        <div class="nav-left">
+            <div class="logo-text">OnyxPlayer</div>
+        </div>
+        <div class="nav-links">
+            <a href="https://github.com/Monometra/Onyx-Project/tree/Onyx" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <div class="dropdown" tabindex="0">
+                <a href="#" aria-haspopup="true" aria-expanded="false" onclick="event.preventDefault()">Docs <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                <div class="dropdown-content" aria-label="Documentation submenu">
+                    <a href="https://github.com/Monometra/Onyx-Project/blob/Onyx/README.md" target="_blank" rel="noopener noreferrer">README</a>
+                    <a href="https://github.com/Monometra/Onyx-Project/blob/Onyx/OnyxPlayerVencord.theme.css" target="_blank" rel="noopener noreferrer">Theme CSS</a>
+                    <a href="https://github.com/Monometra/Onyx-Project/issues" target="_blank" rel="noopener noreferrer">Report Issue</a>
+                </div>
+            </div>
+            <a href="https://github.com/Monometra/Onyx-Project#support-this-project" target="_blank" rel="noopener noreferrer">Support</a>
+        </div>
+        <div class="nav-cta">
+            <a class="download-btn" href="https://raw.githubusercontent.com/Monometra/Onyx-Project/Onyx/OnyxPlayerVencord.theme.css" target="_blank" rel="noopener noreferrer" aria-label="Download OnyxPlayer Theme CSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Get Theme</a>
+        </div>
+    </nav>
+    <main class="hero" role="main">
+        <h1 class="hero-headline"><span id="typewriter"></span><span id="cursor" class="typewriter-cursor"></span></h1>
+        <div id="content-below" class="fade-in-section">
+            <p>Designed for a seamless visual experience with minimal distractions. Enhance your Spotify player with a sleek, modern dark theme that blends beautifully with your desktop environment.</p>
+            <div class="hero-buttons">
+                <a class="btn btn-light" href="https://github.com/Monometra/Onyx-Project/tree/Onyx" target="_blank" rel="noopener noreferrer" aria-label="View OnyxPlayer Project on GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> View Project</a>
+                <a class="btn btn-dark" href="https://raw.githubusercontent.com/Monometra/Onyx-Project/Onyx/OnyxPlayerVencord.theme.css" target="_blank" rel="noopener noreferrer" aria-label="Download OnyxPlayer Theme CSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download CSS</a>
+            </div>
+            <div class="icons" role="list" aria-label="Social and project links">
+                <a href="https://github.com/Monometra/Onyx-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                <a href="https://github.com/Monometra/Onyx-Project/issues" target="_blank" rel="noopener noreferrer" aria-label="Join the community discussion"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></a>
+            </div>
+        </div>
     </main>
-
-    <section class="installation-guide" aria-label="Frequently Asked Questions">
-      <h3>Frequently Asked Questions</h3>
-      <ol>
-        <li><strong>Q: What is Onyx?</strong><br>A: Onyx is a clean, minimal Vencord theme for the Spotify player, designed to enhance your visual experience without adding unnecessary clutter.</li>
-        <li><strong>Q: How do I install the theme?</strong><br>A: Copy the import rule above and paste it into Vencord's <em>Custom CSS</em> section under user settings. Need help? Check our <a href="https://github.com/Monometra/Onyx-Project" target="_blank">GitHub guide</a>.</li>
-        <li><strong>Q: Does this theme work on mobile?</strong><br>A: No, Vencord themes are currently only supported on the desktop version of Discord.</li>
-        <li><strong>Q: Will this theme receive updates?</strong><br>A: Yes, updates are pushed to the GitHub repo. You’ll automatically receive them if you're using the import link.</li>
-        <li><strong>Q: I found a bug. Where can I report it?</strong><br>A: Please open an issue on the <a href="https://github.com/Monometra/Onyx-Project/issues" target="_blank">GitHub Issues</a> page.</li>
-      </ol>
-    </section>
-    <footer>
-      <p>Designed by Onyx-Project. Find the project on <a href="https://github.com/Monometra/Onyx-Project" target="_blank">GitHub</a>.</p>
-    </footer>
-  </div>
-
-  <script>
-    async function copyToClipboard() {
-      const urlBox = document.querySelector('.url-box');
-      const button = document.getElementById('copy-button');
-      const textToCopy = urlBox.value;
-
-      if (button.classList.contains('copied')) return;
-
-      let success = false;
-      try {
-        await navigator.clipboard.writeText(textToCopy);
-        success = true;
-      } catch (err) {
-        urlBox.select();
-        try {
-          document.execCommand('copy');
-          success = true;
-        } catch {}
-      }
-
-      if (success) {
-        button.classList.add('copied');
-        button.setAttribute('aria-pressed', 'true');
-        button.disabled = true;
-        setTimeout(() => {
-          button.classList.remove('copied');
-          button.setAttribute('aria-pressed', 'false');
-          button.disabled = false;
-        }, 2000);
-      } else {
-        alert('Could not copy the rule. Please copy it manually.');
-      }
-    }
-  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const typewriterElement = document.getElementById('typewriter');
+            const cursorElement = document.getElementById('cursor');
+            const contentBelow = document.getElementById('content-below');
+            const lines = ['<span class="logo-title">OnyxPlayer</span>', '<span class="italic">A dynamic, bloat-free theme</span> for the Vencord Spotify player.'];
+            const options = {
+                typeSpeed: 40,
+                pauseBetweenLines: 500,
+                startDelay: 500
+            };
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            const typeLine = async line => {
+                const tokens = line.split(/(<[^>]+>)/);
+                cursorElement.classList.add('typing');
+                for (const token of tokens) {
+                    if (token.startsWith('<')) {
+                        typewriterElement.innerHTML += token;
+                    } else {
+                        for (const char of token) {
+                            typewriterElement.innerHTML += char;
+                            await wait(options.typeSpeed + (Math.random() - .5) * 20);
+                        }
+                    }
+                }
+                cursorElement.classList.remove('typing');
+            };
+            const startTyping = async () => {
+                await wait(options.startDelay);
+                for (let i = 0; i < lines.length; i++) {
+                    await typeLine(lines[i]);
+                    await wait(options.pauseBetweenLines);
+                    if (i < lines.length - 1) {
+                        typewriterElement.innerHTML += '<br>';
+                    }
+                }
+                cursorElement.style.opacity = '0';
+                contentBelow.classList.add('visible');
+            };
+            startTyping();
+        })
+    </script>
 </body>
 </html>
