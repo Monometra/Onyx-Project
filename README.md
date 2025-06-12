@@ -48,7 +48,9 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 
 ---
 
-## You can also check our Discord Server under development right now! [Onyx Project](https://discord.gg/83wN63J4C4)
+### You can also check our Discord Server and our Website right now! 
+- [Onyx Project Discord Server](https://discord.gg/83wN63J4C4) 
+- [Onyx Project Website W.I.P](https://monometra.github.io/Onyx-Project/)
 
 ---
 
