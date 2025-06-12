@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cwallet.com;
+    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+    font-src https://fonts.gstatic.com;
+    connect-src 'self';
+    img-src 'self' data:;
+    frame-src https://cwallet.com;
+  " />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onyx Theme for Vencord</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #121212;
+      color: #ddd;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header p {
+      color: #bbb;
+      font-weight: 400;
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 10px auto 0 auto;
+    }
+    svg text.logo-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 70px;
+      font-weight: 700;
+      fill: url(#logoGradient);
+    }
+    main h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    main p {
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .copy-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .url-box {
+      flex-grow: 1;
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #222;
+      color: #eee;
+      font-family: monospace;
+      font-size: 1rem;
+      user-select: all;
+    }
+    .cta-button {
+      background-color: #292929;
+      border: 1px solid #666;
+      border-radius: 6px;
+      color: #bbb;
+      font-weight: 600;
+      padding: 10px 18px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 110px;
+    }
+    .cta-button:hover {
+      background-color: #3c3c3c;
+      color: #ddd;
+      box-shadow: 0 0 5px 1px #555;
+    }
+    .cta-button:active {
+      background-color: #222;
+      box-shadow: none;
+    }
+    .cta-button.copied {
+      background-color: #1e4620;
+      color: #a5d6a7;
+      border-color: #a5d6a7;
+      box-shadow: 0 0 8px 2px #a5d6a7;
+    }
+    .button-text.success {
+      display: none;
+    }
+    .cta-button.copied .button-text.original {
+      display: none;
+    }
+    .cta-button.copied .button-text.success {
+      display: inline;
+    }
+    .tip-section {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+    .tip-section h3 {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .tip-button {
+      background-color: #292929;
+      border: 1px solid #555;
+      border-radius: 8px;
+      color: #bbb;
+      font-weight: 600;
+      padding: 12px 28px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .tip-button:hover {
+      background-color: #3b3b3b;
+      color: #e0e0e0;
+    }
+    .installation-guide {
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      padding: 20px;
+      color: #bbb;
+    }
+    .installation-guide h3 {
+      margin-top: 0;
+      font-weight: 700;
+      color: #ddd;
+    }
+    .installation-guide ol {
+      padding-left: 1.4em;
+    }
+    .installation-guide ol li {
+      margin-bottom: 10px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #aaa;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <svg
+        width="220"
+        height="80"
+        viewBox="0 0 220 80"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Onyx Logo"
+        role="img"
+      >
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" style="stop-color:#E0E0E0; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#A0A0A0; stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <text
+          x="50%"
+          y="50%"
+          dy=".35em"
+          text-anchor="middle"
+          class="logo-text"
+        >
+          Onyx
+        </text>
+      </svg>
+      <p>
+        A dynamic, bloat-free theme for the Vencord Spotify player. Designed for a
+        seamless visual experience.
+      </p>
+    </header>
+
+    <main>
+      <h2>Get the Theme</h2>
+      <p>
+        Copy the import rule below to use the theme in the plugin's Custom CSS
+        field.
+      </p>
+
+      <div class="copy-container">
+        <input
+          type="text"
+          class="url-box"
+          value="@import url('https://raw.githubusercontent.com/OriIsCute/Spotify-Controls-Refresh/refs/heads/main/Spotify-Controls-Refresh.css');"
+          readonly
+          aria-label="Theme import URL"
+        />
+        <button
+          class="cta-button"
+          id="copy-button"
+          aria-live="polite"
+          aria-pressed="false"
+          onclick="copyToClipboard()"
+        >
+          <span class="button-text original">Copy Rule</span>
+          <span class="button-text success" aria-hidden="true">Copied!</span>
+        </button>
+      </div>
+
+      <section class="tip-section" aria-label="Support the project">
+        <h3>Support This Project</h3>
+        <p>If you like this theme, please consider supporting me!</p>
+        <a
+          href="https://cwallet.com/t/VBDN64HT"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tip-button"
+          role="button"
+          tabindex="0"
+          referrerpolicy="no-referrer"
+        >
+          Tip Me on Cwallet
+        </a>
+      </section>
+    </main>
+
+    <section class="installation-guide" aria-label="Installation Guide">
+      <h3>How to Install</h3>
+      <ol>
+        <li>
+          Go to <code>Settings &gt; Vencord &gt; Plugins</code> and make sure the
+          <strong>SpotifyControls</strong> plugin is enabled.
+        </li>
+        <li>
+          Click the settings icon next to the SpotifyControls plugin to open its
+          options.
+        </li>
+        <li>
+          In the plugin settings, find the "Theme" section and enable the
+          <strong>Use Custom Theme</strong> toggle.
+        </li>
+        <li>
+          Paste the <strong>@import rule</strong> you copied into the text box that
+          appears. The theme will apply instantly.
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p>
+        Designed by OriIsCute. Find the project on
+        <a
+          href="https://github.com/OriIsCute/Spotify-Controls-Refresh"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    async function copyToClipboard() {
+      const urlBox = document.querySelector('.url-box');
+      const button = document.getElementById('copy-button');
+      const textToCopy = urlBox.value;
+
+      if (button.classList.contains('copied')) {
+        return;
+      }
+
+      let success = false;
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        success = true;
+      } catch (err) {
+        console.error('Modern copy failed, falling back.', err);
+        try {
+          urlBox.select();
+          document.execCommand('copy');
+          window.getSelection()?.removeAllRanges();
+          success = true;
+        } catch (legacyErr) {
+          console.error('Legacy copy failed.', legacyErr);
+        }
+      }
+
+      if (success) {
+        button.classList.add('copied');
+        button.setAttribute('aria-pressed', 'true');
+        button.disabled = true;
+
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.setAttribute('aria-pressed', 'false');
+          button.disabled = false;
+        }, 2000);
+      } else {
+        alert('Could not copy the rule. Please copy it manually.');
+      }
+    }
+  </script>
+</body>
+</html>
