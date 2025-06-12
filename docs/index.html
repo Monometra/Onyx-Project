@@ -15,34 +15,34 @@
   <title>Onyx Theme for Vencord</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background: #121212;
-      color: #ddd;
+      background: #0f0f0f;
+      color: #e0e0e0;
       margin: 0;
-      padding: 20px;
+      padding: 30px 20px;
       display: flex;
       justify-content: center;
     }
     .container {
-      max-width: 700px;
       width: 100%;
+      max-width: 720px;
     }
     header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     header p {
-      color: #bbb;
-      font-weight: 400;
+      color: #aaa;
       font-size: 1.1rem;
-      max-width: 500px;
-      margin: 10px auto 0 auto;
+      max-width: 540px;
+      margin: 15px auto 0;
+      line-height: 1.6;
     }
     svg text.logo-text {
       font-family: 'Inter', sans-serif;
@@ -51,9 +51,9 @@
       fill: url(#logoGradient);
     }
     main h2 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     main p {
       font-weight: 500;
@@ -62,42 +62,41 @@
     }
     .copy-container {
       display: flex;
-      gap: 10px;
-      margin-bottom: 30px;
+      gap: 12px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
     }
     .url-box {
-      flex-grow: 1;
-      padding: 10px 15px;
-      border-radius: 6px;
-      border: 1px solid #444;
-      background: #222;
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1b1b1b;
       color: #eee;
       font-family: monospace;
-      font-size: 1rem;
+      font-size: 0.95rem;
       user-select: all;
+      width: 100%;
     }
     .cta-button {
-      background-color: #292929;
-      border: 1px solid #666;
-      border-radius: 6px;
-      color: #bbb;
+      background-color: #222;
+      border: 1px solid #555;
+      border-radius: 8px;
+      color: #ccc;
       font-weight: 600;
-      padding: 10px 18px;
+      padding: 12px 20px;
       cursor: pointer;
       user-select: none;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      min-width: 110px;
+      transition: 0.3s ease;
+      min-width: 120px;
     }
     .cta-button:hover {
-      background-color: #3c3c3c;
-      color: #ddd;
-      box-shadow: 0 0 5px 1px #555;
+      background-color: #333;
+      color: #fff;
+      box-shadow: 0 0 8px 1px #444;
     }
     .cta-button:active {
-      background-color: #222;
-      box-shadow: none;
+      background-color: #161616;
     }
     .cta-button.copied {
       background-color: #1e4620;
@@ -116,119 +115,90 @@
     }
     .tip-section {
       text-align: center;
-      margin-bottom: 40px;
-      color: #ccc;
+      margin-bottom: 50px;
     }
     .tip-section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
       font-weight: 700;
-      margin-bottom: 10px;
     }
     .tip-button {
-      background-color: #292929;
-      border: 1px solid #555;
+      background-color: #242424;
+      border: 1px solid #444;
       border-radius: 8px;
-      color: #bbb;
+      color: #ccc;
       font-weight: 600;
-      padding: 12px 28px;
-      cursor: pointer;
+      padding: 12px 24px;
       text-decoration: none;
       display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      user-select: none;
+      transition: 0.3s ease;
     }
     .tip-button:hover {
-      background-color: #3b3b3b;
-      color: #e0e0e0;
+      background-color: #333;
+      color: #fff;
     }
     .installation-guide {
-      background-color: #1c1c1c;
-      border-radius: 8px;
-      padding: 20px;
-      color: #bbb;
+      background-color: #181818;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
     }
     .installation-guide h3 {
+      font-size: 1.3rem;
       margin-top: 0;
+      color: #e0e0e0;
       font-weight: 700;
-      color: #ddd;
     }
     .installation-guide ol {
       padding-left: 1.4em;
+      line-height: 1.6;
     }
-    .installation-guide ol li {
-      margin-bottom: 10px;
+    .installation-guide li {
+      margin-bottom: 12px;
+    }
+    .installation-guide a {
+      color: #8ab4f8;
+      text-decoration: none;
+    }
+    .installation-guide a:hover {
+      text-decoration: underline;
     }
     footer {
-      margin-top: 40px;
       text-align: center;
-      color: #666;
       font-size: 0.9rem;
-      user-select: none;
+      color: #666;
+      margin-top: 50px;
     }
     footer a {
       color: #888;
       text-decoration: none;
     }
     footer a:hover {
-      color: #aaa;
-      text-decoration: underline;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <svg
-        width="220"
-        height="80"
-        viewBox="0 0 220 80"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-label="Onyx Logo"
-        role="img"
-      >
+      <svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg" aria-label="Onyx Logo" role="img">
         <defs>
           <linearGradient id="logoGradient" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" style="stop-color:#E0E0E0; stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#A0A0A0; stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#E0E0E0;" />
+            <stop offset="100%" style="stop-color:#A0A0A0;" />
           </linearGradient>
         </defs>
-        <text
-          x="50%"
-          y="50%"
-          dy=".35em"
-          text-anchor="middle"
-          class="logo-text"
-        >
-          Onyx
-        </text>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="logo-text">Onyx</text>
       </svg>
-      <p>
-        A dynamic, bloat-free theme for the Vencord Spotify player. Designed for a
-        seamless visual experience.
-      </p>
+      <p>A dynamic, bloat-free theme for the Vencord Spotify player. Designed for a seamless visual experience.</p>
     </header>
 
     <main>
       <h2>Get the Theme</h2>
-      <p>
-        Copy the import rule below to use the theme in the plugin's Custom CSS
-        field.
-      </p>
-
+      <p>Copy the import rule below to use the theme in the plugin's Custom CSS field.</p>
       <div class="copy-container">
-        <input
-          type="text"
-          class="url-box"
-          value="@import url('https://raw.githubusercontent.com/OriIsCute/Spotify-Controls-Refresh/refs/heads/main/Spotify-Controls-Refresh.css');"
-          readonly
-          aria-label="Theme import URL"
-        />
-        <button
-          class="cta-button"
-          id="copy-button"
-          aria-live="polite"
-          aria-pressed="false"
-          onclick="copyToClipboard()"
-        >
+        <input type="text" class="url-box" value="@import url('https://raw.githubusercontent.com/Monometra/Onyx-Project/refs/heads/Onyx/OnyxPlayerVencord.theme.css');" readonly aria-label="Theme import URL" />
+        <button class="cta-button" id="copy-button" onclick="copyToClipboard()" aria-live="polite" aria-pressed="false">
           <span class="button-text original">Copy Rule</span>
           <span class="button-text success" aria-hidden="true">Copied!</span>
         </button>
@@ -237,52 +207,22 @@
       <section class="tip-section" aria-label="Support the project">
         <h3>Support This Project</h3>
         <p>If you like this theme, please consider supporting me!</p>
-        <a
-          href="https://cwallet.com/t/VBDN64HT"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="tip-button"
-          role="button"
-          tabindex="0"
-          referrerpolicy="no-referrer"
-        >
-          Tip Me on Cwallet
-        </a>
+        <a href="https://cwallet.com/t/VBDN64HT" target="_blank" rel="noopener noreferrer" class="tip-button" role="button" tabindex="0">Tip Me on Cwallet</a>
       </section>
     </main>
 
-    <section class="installation-guide" aria-label="Installation Guide">
-      <h3>How to Install</h3>
+    <section class="installation-guide" aria-label="Frequently Asked Questions">
+      <h3>Frequently Asked Questions</h3>
       <ol>
-        <li>
-          Go to <code>Settings &gt; Vencord &gt; Plugins</code> and make sure the
-          <strong>SpotifyControls</strong> plugin is enabled.
-        </li>
-        <li>
-          Click the settings icon next to the SpotifyControls plugin to open its
-          options.
-        </li>
-        <li>
-          In the plugin settings, find the "Theme" section and enable the
-          <strong>Use Custom Theme</strong> toggle.
-        </li>
-        <li>
-          Paste the <strong>@import rule</strong> you copied into the text box that
-          appears. The theme will apply instantly.
-        </li>
+        <li><strong>Q: What is Onyx?</strong><br>A: Onyx is a clean, minimal Vencord theme for the Spotify player, designed to enhance your visual experience without adding unnecessary clutter.</li>
+        <li><strong>Q: How do I install the theme?</strong><br>A: Copy the import rule above and paste it into Vencord's <em>Custom CSS</em> section under user settings. Need help? Check our <a href="https://github.com/Monometra/Onyx-Project" target="_blank">GitHub guide</a>.</li>
+        <li><strong>Q: Does this theme work on mobile?</strong><br>A: No, Vencord themes are currently only supported on the desktop version of Discord.</li>
+        <li><strong>Q: Will this theme receive updates?</strong><br>A: Yes, updates are pushed to the GitHub repo. You’ll automatically receive them if you're using the import link.</li>
+        <li><strong>Q: I found a bug. Where can I report it?</strong><br>A: Please open an issue on the <a href="https://github.com/Monometra/Onyx-Project/issues" target="_blank">GitHub Issues</a> page.</li>
       </ol>
     </section>
-
     <footer>
-      <p>
-        Designed by OriIsCute. Find the project on
-        <a
-          href="https://github.com/OriIsCute/Spotify-Controls-Refresh"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >.
-      </p>
+      <p>Designed by Onyx-Project. Find the project on <a href="https://github.com/Monometra/Onyx-Project" target="_blank">GitHub</a>.</p>
     </footer>
   </div>
 
@@ -292,31 +232,24 @@
       const button = document.getElementById('copy-button');
       const textToCopy = urlBox.value;
 
-      if (button.classList.contains('copied')) {
-        return;
-      }
+      if (button.classList.contains('copied')) return;
 
       let success = false;
       try {
         await navigator.clipboard.writeText(textToCopy);
         success = true;
       } catch (err) {
-        console.error('Modern copy failed, falling back.', err);
+        urlBox.select();
         try {
-          urlBox.select();
           document.execCommand('copy');
-          window.getSelection()?.removeAllRanges();
           success = true;
-        } catch (legacyErr) {
-          console.error('Legacy copy failed.', legacyErr);
-        }
+        } catch {}
       }
 
       if (success) {
         button.classList.add('copied');
         button.setAttribute('aria-pressed', 'true');
         button.disabled = true;
-
         setTimeout(() => {
           button.classList.remove('copied');
           button.setAttribute('aria-pressed', 'false');
