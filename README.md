@@ -28,7 +28,7 @@ A theme by **OnyxProject** that applies a dynamic, visually-rich style to the bu
 1.  Copy this line of code:
    
     ```ruby
-    @import url(`https://raw.githubusercontent.com/Monometra/Onyx-Project/refs/heads/Onyx/OnyxPlayerVencord.theme.css`)
+    https://raw.githubusercontent.com/Monometra/Onyx-Project/refs/heads/Onyx/OnyxPlayerVencord.theme.css
     ```
     
 3.  In Discord, go to **User Settings > Vencord > Themes**.
